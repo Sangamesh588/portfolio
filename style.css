@@ -678,7 +678,7 @@ body[data-theme="cyber"] .image-frame {
   margin-bottom: 4px;
 }
 .education-stat-value {
-  color: var(--white);
+  color: var());
   font-size: 1rem;
   font-weight: 600;
 }
