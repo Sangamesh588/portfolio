@@ -29,23 +29,7 @@
 }
 
 /* Obsidian Dark Theme */
-body[data-theme="obsidian"] {
-  --bg: #0c0c0e;
-  --bg-dark: #141416;
-  --ink: #ececf1;
-  --ink-muted: #8d8d9b;
-  --accent: #a3a3ac;
-  --accent-rgb: 163, 163, 172;
-  --accent-2: #38bdf8;
-  --white: #161619;
-  --border: rgba(255, 255, 255, 0.07);
-  --border-dark: rgba(255, 255, 255, 0.05);
-  --shadow: rgba(0, 0, 0, 0.3);
-  --glass-bg: rgba(12, 12, 14, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --card-bg: #111113;
-  --glow: transparent;
-}
+
 
 /* Midnight Cyber Theme */
 body[data-theme="cyber"] {
