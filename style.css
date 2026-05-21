@@ -73,44 +73,7 @@ a { text-decoration: none; color: inherit; }
 img { display: block; max-width: 100%; }
 
 /* ---------- INVERTED COLOR CURSOR (mix-blend-mode) ---------- */
-.inverted-cursor {
-  width: 22px;
-  height: 22px;
-  background: #fff;
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 10000;
-  mix-blend-mode: difference;
-  transform: translate(-50%, -50%);
-  transition: width 0.25s var(--ease), height 0.25s var(--ease);
-}
-/* Grow the cursor dot when hovering interactive elements */
-.inverted-cursor.hovering {
-  width: 50px;
-  height: 50px;
-}
-
-/* Hide custom cursor on mobile / touch devices */
-@media (pointer: coarse) {
-  .inverted-cursor { display: none; }
-}
-@media (max-width: 960px) {
-  .inverted-cursor { display: none; }
-}
-
 /* ---------- BACKGROUND NEURAL CANVAS ---------- */
-#neural-canvas {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.6;
-}
-
 /* ---------- UTILITY ---------- */
 .italic-serif { 
   font-family: var(--font-serif); 
