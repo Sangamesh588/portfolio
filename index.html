@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sangamesh — Portfolio</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== INVERTED COLOR CURSOR ========== -->
+  <div class="inverted-cursor" id="inverted-cursor"></div>
+
+  <!-- ========== FLOATING THEME SWITCHER ========== -->
+  <div class="theme-switcher">
+    <button class="theme-btn active" data-theme-val="warm" title="Warm Editorial Theme">Warm</button>
+    <button class="theme-btn" data-theme-val="obsidian" title="Obsidian Dark Theme">Obsidian</button>
+    <button class="theme-btn" data-theme-val="cyber" title="Midnight Cyber Theme">Cyber</button>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar">
+    <div class="logo"></div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#" class="nav-cta" target="_blank">Resume ↗</a>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="home">
+    <!-- Interactive Canvas Layer for Neural Network Particle Effect -->
+    <canvas id="neural-canvas"></canvas>
+    
+    <div class="hero-noise"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag reveal">Available for work</div>
+
+      <h1 class="hero-name reveal">
+        Sangamesh
+      </h1>
+
+      <div class="hero-role-line reveal">
+        <span class="italic-serif">— </span>
+        <span id="typing-role">AI/DS Developer</span>
+      </div>
+
+      <p class="hero-desc reveal">
+        I build intelligent, scalable web applications
+        that sit at the intersection of design and machine learning.
+      </p>
+
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn-primary">View Work</a>
+        <a href="#contact" class="btn-ghost">Let's Talk →</a>
+      </div>
+    </div>
+
+    <div class="hero-image reveal">
+      <div class="image-frame">
+        <img src="./profile.jpeg" alt="Sangamesh Photo" />
+        <div class="image-border"></div>
+      </div>
+      
+      <!-- Symmetrical Floating Credentials -->
+      <div class="hero-stat stat-projects">
+        <span class="stat-num">10+</span>
+        <span class="stat-label">Projects Built</span>
+      </div>
+
+      <div class="hero-stat stat-dsa">
+        <span class="stat-num">100+</span>
+        <span class="stat-label">DSA Solved</span>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">scroll ↓</div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="about" id="about">
+    <div class="section-label reveal">01 — About</div>
+
+    <div class="about-grid">
+      <h2 class="about-heading reveal">
+        Building things that
+        <span class="italic-serif">matter.</span>
+      </h2>
+
+      <div class="about-body">
+        <p class="reveal">
+          I'm a passionate AI/DS Developer and Full Stack Builder from
+          Bangalore, India. I focus on creating modern intelligent
+          applications and premium user experiences that solve real-world
+          problems.
+        </p>
+        <p class="reveal">
+          I enjoy working at the intersection of clean code and thoughtful
+          design — whether that's a machine learning pipeline, a fast API,
+          or a polished UI that people love to use.
+        </p>
+
+        <div class="about-facts reveal">
+          <div class="fact">
+            <span class="fact-key">Based in</span>
+            <span class="fact-val">Bangalore, India</span>
+          </div>
+          <div class="fact">
+            <span class="fact-key">Focus</span>
+            <span class="fact-val">AI/DS + Full Stack</span>
+          </div>
+          <div class="fact">
+            <span class="fact-key">Open to</span>
+            <span class="fact-val">Internships & Freelance</span>
+          </div>
+        </div>
+
+        <!-- ========== EDUCATION SUBSECTION ========== -->
+        <div class="about-education reveal">
+          <h3 class="education-title">Education</h3>
+          <div class="education-item">
+            <div class="education-header">
+              <strong class="education-degree">B.E. in Computer Science & Engineering (AI & DS)</strong>
+              <span class="education-timeline">2023 — 2027</span>
+            </div>
+            <span class="education-school">Your College Name / VTU, Bangalore</span>
+            
+            <div class="education-stats">
+              <div class="education-stat-box">
+                <span class="education-stat-label">Current Year</span>
+                <strong class="education-stat-value">3rd Year (6th Sem)</strong>
+              </div>
+              <div class="education-stat-box">
+                <span class="education-stat-label">CGPA</span>
+                <strong class="education-stat-value highlight">9.20 / 10.00</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS SECTION — INTERACTIVE ROADMAP ========== -->
+  <section class="skills" id="skills">
+    <div class="section-label reveal">02 — Skills</div>
+    <h2 class="section-heading reveal">What I work with</h2>
+
+    <!-- Skills Category Tabs -->
+    <div class="skills-categories reveal">
+      <div class="skills-tab active" data-skill-cat="languages">Languages & AI/DS</div>
+      <div class="skills-tab" data-skill-cat="frontend">Frontend Dev</div>
+      <div class="skills-tab" data-skill-cat="backend">Backend & Database</div>
+    </div>
+
+    <!-- Roadmap Visualization Container -->
+    <div class="skills-roadmap-container reveal">
+
+      <!-- Path 1: Languages & AI/DS -->
+      <div class="roadmap-path active" data-path="languages">
+        <div class="roadmap-line"></div>
+        <div class="roadmap-step">
+          <div class="step-marker">01</div>
+          <div class="step-content">
+            <span class="step-icon">⚡</span>
+            <h4 class="step-title">C Programming</h4>
+            <p class="step-desc">Systems-level programming, pointers, memory management & data structures foundation</p>
+          </div>
+        </div>
+        <div class="roadmap-step">
+          <div class="step-marker">02</div>
+          <div class="step-content">
+            <span class="step-icon">🚀</span>
+            <h4 class="step-title">Java</h4>
+            <p class="step-desc">Object-oriented programming, enterprise patterns & cross-platform application development</p>
+          </div>
+        </div>
+        <div class="roadmap-step">
+          <div class="step-marker">03</div>
+          <div class="step-content">
+            <span class="step-icon">🐍</span>
+            <h4 class="step-title">Python</h4>
+            <p class="step-desc">Primary language for AI/ML pipelines, data analysis, web backends & automation</p>
+          </div>
+        </div>
+        <div class="roadmap-step">
+          <div class="step-marker">04</div>
+          <div class="step-content">
+            <span class="step-icon">🤖</span>
+            <h4 class="step-title">Machine Learning & NLP</h4>
+            <p class="step-desc">Scikit-learn, TensorFlow, Transformers — building intelligent prediction & classification systems</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Path 2: Frontend Dev -->
+      <div class="roadmap-path" data-path="frontend">
+        <div class="roadmap-line"></div>
+        <div class="roadmap-step">
+          <div class="step-marker">01</div>
+          <div class="step-content">
+            <span class="step-icon">💻</span>
+            <h4 class="step-title">HTML5 & CSS3</h4>
+            <p class="step-desc">Semantic markup, Flexbox, CSS Grid, animations & stunning responsive interfaces</p>
+          </div>
+        </div>
+        <div class="roadmap-step">
+          <div class="step-marker">02</div>
+          <div class="step-content">
+            <span class="step-icon">⚡</span>
+            <h4 class="step-title">JavaScript</h4>
+            <p class="step-desc">DOM manipulation, ES6+, async/await, Canvas API & interactive web applications</p>
+          </div>
+        </div>
+        <div class="roadmap-step">
+          <div class="step-marker">03</div>
+          <div class="step-content">
+            <span class="step-icon">🎨</span>
+            <h4 class="step-title">Responsive Design</h4>
+            <p class="step-desc">Mobile-first methodology, media queries, fluid typography & cross-browser compatibility</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Path 3: Backend & Database -->
+      <div class="roadmap-path" data-path="backend">
+        <div class="roadmap-line"></div>
+        <div class="roadmap-step">
+          <div class="step-marker">01</div>
+          <div class="step-content">
+            <span class="step-icon">🚀</span>
+            <h4 class="step-title">FastAPI</h4>
+            <p class="step-desc">High-performance async Python REST APIs with automatic OpenAPI documentation</p>
+          </div>
+        </div>
+        <div class="roadmap-step">
+          <div class="step-marker">02</div>
+          <div class="step-content">
+            <span class="step-icon">🍃</span>
+            <h4 class="step-title">MongoDB</h4>
+            <p class="step-desc">NoSQL document database for flexible, scalable data storage & aggregation pipelines</p>
+          </div>
+        </div>
+        <div class="roadmap-step">
+          <div class="step-marker">03</div>
+          <div class="step-content">
+            <span class="step-icon">🗄️</span>
+            <h4 class="step-title">MySQL</h4>
+            <p class="step-desc">Relational database design, complex queries, indexing & data integrity management</p>
+          </div>
+        </div>
+        <div class="roadmap-step">
+          <div class="step-marker">04</div>
+          <div class="step-content">
+            <span class="step-icon">🐙</span>
+            <h4 class="step-title">Git & GitHub</h4>
+            <p class="step-desc">Version control, branching strategies, CI/CD workflows & collaborative development</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section class="projects" id="projects">
+    <div class="section-label reveal">03 — Projects</div>
+    <h2 class="section-heading reveal">Selected Work</h2>
+
+    <!-- Project Filters -->
+    <div class="project-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+      <button class="filter-btn" data-filter="fullstack">Fullstack & Web</button>
+    </div>
+
+    <div class="projects-list">
+
+      <!-- PROJECT 1 — KCET Predictor -->
+      <div class="project-row reveal" 
+           data-category="ai-ml"
+           data-title="KCET College Predictor"
+           data-desc="AI-powered college prediction platform using machine learning and historical cutoff data analysis to help students make informed admission decisions."
+           data-tech="Python, FastAPI, Scikit-learn, Pandas, JS, HTML5"
+           data-challenges="Handling highly sparse historical seat matrix data by implementing weighted distance scoring algorithms and high-speed in-memory database lookup."
+           data-link="https://github.com/Sangamesh588"
+           data-github="https://github.com/Sangamesh588">
+        <div class="project-meta">
+          <span class="project-number">01</span>
+          <span class="project-tags">ML · Python · FastAPI</span>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">KCET College Predictor</h3>
+          <p class="project-desc">
+            AI-powered college prediction platform using machine learning
+            and historical cutoff data analysis to help students make
+            informed admission decisions.
+          </p>
+          <div class="project-link-group">
+            <a href="#" class="project-link modal-trigger-btn">
+              View Details ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 — AI Chatbot -->
+      <div class="project-row reveal" 
+           data-category="ai-ml"
+           data-title="AI Chatbot Assistant"
+           data-desc="Intelligent conversational interface with natural language understanding, contextual memory, and a clean modern UI experience designed for everyday use."
+           data-tech="Transformers, PyTorch, React, Python, FastAPI"
+           data-challenges="Optimizing Transformer context window sizes and caching vector databases to support multiple concurrent chat requests with <300ms latency."
+           data-link="https://github.com/Sangamesh588"
+           data-github="https://github.com/Sangamesh588">
+        <div class="project-meta">
+          <span class="project-number">02</span>
+          <span class="project-tags">NLP · React · API</span>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">AI Chatbot Assistant</h3>
+          <p class="project-desc">
+            Intelligent conversational interface with natural language
+            understanding, contextual memory, and a clean modern UI
+            experience designed for everyday use.
+          </p>
+          <div class="project-link-group">
+            <a href="#" class="project-link modal-trigger-btn">
+              View Details ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 3 — Intelligent Portfolio Optimizer -->
+      <div class="project-row reveal" 
+           data-category="fullstack"
+           data-title="Portfolio Smart Analytics"
+           data-desc="An automated dashboard that provides stock portfolio optimization recommendations based on modern portfolio theory and dynamic risk analysis."
+           data-tech="FastAPI, React, Chart.js, NumPy, SciPy"
+           data-challenges="Implementing highly performant SciPy optimization algorithms in asynchronous Python workers and drawing real-time vector canvas visualizations."
+           data-link="https://github.com/Sangamesh588"
+           data-github="https://github.com/Sangamesh588">
+        <div class="project-meta">
+          <span class="project-number">03</span>
+          <span class="project-tags">FinTech · Python · Web</span>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Portfolio Smart Analytics</h3>
+          <p class="project-desc">
+            An automated dashboard that provides stock portfolio optimization recommendations based on modern portfolio theory and dynamic risk analysis.
+          </p>
+          <div class="project-link-group">
+            <a href="#" class="project-link modal-trigger-btn">
+              View Details ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 4 — AgriTech Banana Plantation Platform -->
+      <div class="project-row reveal" 
+           data-category="fullstack"
+           data-title="Banana Plantation Management Platform"
+           data-desc="A full-featured digital showcase and agricultural supply chain platform built to optimize logistics, order forms, and yield databases for a major banana plantation."
+           data-tech="HTML5, CSS3, JavaScript, PHP, MySQL, Apache"
+           data-challenges="Designing high-performance yield catalogs and automated invoice generation mechanisms that work reliably over slow network setups in agricultural field headquarters."
+           data-link="https://github.com/Sangamesh588"
+           data-github="https://github.com/Sangamesh588">
+        <div class="project-meta">
+          <span class="project-number">04</span>
+          <span class="project-tags">AgriTech · PHP · Business</span>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Banana Plantation Management Platform</h3>
+          <p class="project-desc">
+            A full-featured digital showcase and agricultural supply chain platform built to optimize logistics, order forms, and yield databases for a major banana plantation.
+          </p>
+          <div class="project-link-group">
+            <a href="#" class="project-link modal-trigger-btn">
+              View Details ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION — PREMIUM CARDS + GLOBE ========== -->
+  <section class="contact" id="contact">
+    <div class="section-label reveal">04 — Contact</div>
+
+    <div class="contact-grid-container">
+      <div class="contact-inner reveal">
+        <h2 class="contact-heading">
+          Let's build something
+          <span class="italic-serif">great together.</span>
+        </h2>
+
+        <div class="contact-cards-grid">
+          <!-- Email Card -->
+          <a href="mailto:sangameshnidode58@gmail.com" class="contact-card" id="card-email">
+            <div class="card-glow"></div>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="card-info">
+              <span class="card-label">Email</span>
+              <span class="card-value">sangameshnidode58@gmail.com</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </a>
+
+          <!-- GitHub Card -->
+          <a href="https://github.com/Sangamesh588" target="_blank" class="contact-card" id="card-github">
+            <div class="card-glow"></div>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </div>
+            <div class="card-info">
+              <span class="card-label">GitHub</span>
+              <span class="card-value">Sangamesh588</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </a>
+
+          <!-- LinkedIn Card -->
+          <a href="https://www.linkedin.com/in/sangamesh-nidode-4628b4324/" target="_blank" class="contact-card" id="card-linkedin">
+            <div class="card-glow"></div>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div class="card-info">
+              <span class="card-label">LinkedIn</span>
+              <span class="card-value">sangamesh-nidode</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </a>
+
+          <!-- Phone Card -->
+          <a href="tel:+919876543210" class="contact-card" id="card-phone">
+            <div class="card-glow"></div>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="card-info">
+              <span class="card-label">Phone</span>
+              <span class="card-value">+91 XXXXX XXXXX</span>
+            </div>
+            <span class="card-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Gorgeous interactive 3D Globe Visualizer -->
+      <div class="contact-visual reveal">
+        <canvas id="globe-canvas"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <span>© 2025 Sangamesh</span>
+    <span>Built with care ♥</span>
+  </footer>
+
+  <!-- ========== PROJECT DETAIL MODAL ========== -->
+  <div class="project-modal" id="project-modal">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-header">
+        <span class="modal-category" id="modal-category">AI / ML</span>
+        <h3 class="modal-title" id="modal-title">Project Title</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-desc-section">
+          <h4>Overview</h4>
+          <p id="modal-description">Project overview details will go here.</p>
+        </div>
+        <div class="modal-grid">
+          <div class="modal-grid-item">
+            <strong>Key Technologies</strong>
+            <p id="modal-tech">Tech stack</p>
+          </div>
+          <div class="modal-grid-item">
+            <strong>Challenges & Solutions</strong>
+            <p id="modal-challenges">Key challenges solved</p>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <a href="#" class="btn-primary" id="modal-link" target="_blank">Launch App ↗</a>
+          <a href="#" class="btn-ghost" id="modal-github" target="_blank">GitHub Repo ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GSAP Animation Framework -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <!-- Custom Logic Script -->
+  <script src="script.js"></script>
+</body>
+</html>
